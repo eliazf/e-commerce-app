@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Header from "./components/header/Header";
+import { Header } from "./components";
 
 import { Home, Settings, Login, Cart } from "./pages";
 
