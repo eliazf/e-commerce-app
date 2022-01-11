@@ -1,0 +1,26 @@
+[
+  {
+    "id": 109237834,
+    "name": "Bike 1",
+    "description": "Best for off-road trip",
+    "price": 300,
+    "imgUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.allterraincycles.co.uk%2FImages%2FOriginal%2F147139_1.jpg&f=1&nofb=1",
+    "longDescription": "a lacus vestibulum sed arcu non odio euismod lacinia at quis risus sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in dictum non consectetur a erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu"
+  },
+  {
+    "id": 687324678,
+    "name": "Bike 2",
+    "description": "Enjoy the roads",
+    "price": 800,
+    "imgUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fww1.prweb.com%2Fprfiles%2F2010%2F05%2F14%2F3666084%2F0_ScattanteCFRComp.jpg&f=1&nofb=1",
+    "longDescription": "a lacus vestibulum sed arcu non odio euismod lacinia at quis risus sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in dictum non consectetur a erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu"
+  },
+  {
+    "id": 398389546,
+    "name": "Bike 3",
+    "description": "Adrenalize yourself",
+    "price": 500,
+    "imgUrl": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.nCPqJSiMbtvTeLPczIOmPgHaEK%26pid%3DApi&f=1",
+    "longDescription": "a lacus vestibulum sed arcu non odio euismod lacinia at quis risus sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque in dictum non consectetur a erat nam at lectus urna duis convallis convallis tellus id interdum velit laoreet id donec ultrices tincidunt arcu"
+  }
+]
