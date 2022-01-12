@@ -36,11 +36,30 @@ export function CartContextProvider({ children }) {
     ]);
   };
 
-  console.log(cartContent);
+  const removeAllElementsFromCart = () => {
+    setCartContent([]);
+  };
+
+  const nOfCartElements = cartContent.length;
+
+  const calcultateTotalPrice = () => {
+    var total = 0;
+    cartContent.forEach((item) => (total += item.price * item.quantity));
+    return total;
+  };
+
+  const totalPrice = calcultateTotalPrice();
 
   return (
     <CartContext.Provider
-      value={{ cartContent, addElementToCart, removeElementFromCart }}
+      value={{
+        cartContent,
+        addElementToCart,
+        removeElementFromCart,
+        removeAllElementsFromCart,
+        nOfCartElements,
+        totalPrice,
+      }}
     >
       {children}
     </CartContext.Provider>

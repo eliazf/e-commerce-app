@@ -1,14 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { useCartContext } from "../../contexts/CartContext";
 import "./index.css";
 import Dropdown from "./Dropdown";
 
 export default function Header() {
+  const { nOfCartElements } = useCartContext();
+
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  const allPageSelector = useRef(document.getElementsByTagName("html")[0]);
 
-  const handleClick = () => setClick(!click);
-  const closeMoblieMenu = () => setClick(false);
+  console.log(allPageSelector);
+
+  const handleClick = () => {
+    setClick(!click);
+    allPageSelector.current.classList.toggle("disabled-scroll");
+  };
+  const closeMoblieMenu = () => {
+    setClick(false);
+    allPageSelector.current.classList.remove("disabled-scroll");
+  };
 
   const onMouseEnter = () => {
     if (window.innerWidth < 960) {
@@ -29,10 +41,7 @@ export default function Header() {
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-logo">
-        <img
-          alt="BikeSpecialists Logo"
-          src={process.env.PUBLIC_URL + "img/logo.png"}
-        />
+        <img alt="Logo" src={process.env.PUBLIC_URL + "img/logo.png"} />
       </Link>
       <div className="menu-icon" onClick={handleClick}>
         <i className={click ? "fas fa-times" : "fas fa-bars"} />
@@ -49,13 +58,13 @@ export default function Header() {
           onMouseLeave={onMouseLeave}
         >
           <Link to="/account" className="nav-links" onClick={closeMoblieMenu}>
-            Account <i class="fas fa-caret-down"></i>
+            Account {!click ? <i class="fas fa-caret-down" /> : null}
           </Link>
           {dropdown && <Dropdown />}
         </li>
         <li className="nav-item">
           <Link to="/cart" className="nav-links" onClick={closeMoblieMenu}>
-            Cart
+            Cart ({nOfCartElements})
           </Link>
         </li>
       </ul>

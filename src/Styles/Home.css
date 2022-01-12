@@ -40,8 +40,12 @@ a {
   color: black;
 }
 
-/* .item-title {
+@media screen and (max-width: 480px) {
+  .items-list {
+    align-items: center;
+    justify-content: center;
+  }
+  .item-box {
+    width: 80%;
+  }
 }
-
-.item-description {
-} */
